@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Verde"
+    tools:context=".SingleTouchScreen">
+
+    <ImageView
+        android:id="@+id/imageHole1"
+        android:layout_width="136dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="365dp"
+        android:layout_marginBottom="7dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageHole4"
+        app:layout_constraintEnd_toStartOf="@+id/imageHole2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hole" />
+
+    <ImageView
+        android:id="@+id/imageHole2"
+        android:layout_width="136dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="365dp"
+        android:layout_marginBottom="7dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageHole5"
+        app:layout_constraintEnd_toStartOf="@+id/imageHole3"
+        app:layout_constraintStart_toEndOf="@+id/imageHole1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hole" />
+
+    <ImageView
+        android:id="@+id/imageHole3"
+        android:layout_width="136dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="365dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="7dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageHole6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageHole2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hole" />
+
+    <ImageView
+        android:id="@+id/imageHole4"
+        android:layout_width="136dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageHole7"
+        app:layout_constraintEnd_toStartOf="@+id/imageHole5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageHole1"
+        app:srcCompat="@drawable/hole" />
+
+    <ImageView
+        android:id="@+id/imageHole5"
+        android:layout_width="136dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageHole8"
+        app:layout_constraintEnd_toStartOf="@+id/imageHole6"
+        app:layout_constraintStart_toEndOf="@+id/imageHole4"
+        app:layout_constraintTop_toBottomOf="@+id/imageHole2"
+        app:srcCompat="@drawable/hole" />
+
+    <ImageView
+        android:id="@+id/imageHole6"
+        android:layout_width="136dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageHole9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageHole5"
+        app:layout_constraintTop_toBottomOf="@+id/imageHole3"
+        app:srcCompat="@drawable/hole" />
+
+    <ImageView
+        android:id="@+id/imageHole7"
+        android:layout_width="136dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="229dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageHole8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageHole4"
+        app:srcCompat="@drawable/hole" />
+
+    <ImageView
+        android:id="@+id/imageHole8"
+        android:layout_width="136dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="229dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageHole9"
+        app:layout_constraintStart_toEndOf="@+id/imageHole7"
+        app:layout_constraintTop_toBottomOf="@+id/imageHole5"
+        app:srcCompat="@drawable/hole" />
+
+    <ImageView
+        android:id="@+id/imageHole9"
+        android:layout_width="136dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="229dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageHole8"
+        app:layout_constraintTop_toBottomOf="@+id/imageHole6"
+        app:srcCompat="@drawable/hole" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
