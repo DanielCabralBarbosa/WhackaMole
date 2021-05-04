@@ -20,7 +20,7 @@ public class SingleTouchScreen extends AppCompatActivity implements View.OnTouch
 
         game = new Game(this);
         setContentView(game);
-        
+
     }
 
     private void setContentView(Game game) {

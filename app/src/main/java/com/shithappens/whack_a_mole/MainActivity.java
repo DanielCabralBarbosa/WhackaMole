@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     Button btnJogar;
@@ -18,7 +20,15 @@ public class MainActivity extends AppCompatActivity {
 
         btnJogar = findViewById(R.id.btnJogar);
 
-    }
+        btnJogar.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+
+            Intent intent = new Intent(getApplicationContext(), Game.class);
+
+            startActivity( intent );
+
+        }
 
 
 
