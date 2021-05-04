@@ -3,6 +3,7 @@ package com.shithappens.whack_a_mole;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
@@ -10,8 +11,6 @@ import android.view.View;
 public class SingleTouchScreen extends AppCompatActivity implements View.OnTouchListener {
 
     Game game;
-    Mole mole;
-    Hole hole;
 
 
     @Override
@@ -20,6 +19,11 @@ public class SingleTouchScreen extends AppCompatActivity implements View.OnTouch
 
         game = new Game(this);
         setContentView(game);
+
+    }
+
+    protected void startTimer() {
+       timer = new CountDownTimer()
 
     }
 

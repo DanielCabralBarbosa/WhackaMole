@@ -20,16 +20,16 @@ public class MainActivity extends AppCompatActivity {
 
         btnJogar = findViewById(R.id.btnJogar);
 
-        btnJogar.setOnClickListener(new View.OnClickListener() {
-        @Override
+    }
         public void onClick(View view) {
 
-            Intent intent = new Intent(getApplicationContext(), Game.class);
+            Intent intent = new Intent(getApplicationContext(), SingleTouchScreen.class);
 
             startActivity( intent );
 
         }
 
-
-
 }
+
+
+
