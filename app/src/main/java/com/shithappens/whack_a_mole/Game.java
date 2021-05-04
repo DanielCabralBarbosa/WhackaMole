@@ -25,8 +25,8 @@ public class Game extends View {
 
         Rect dstRect = new Rect();
         dstRect.left = x; dstRect.top = y;
-        dstRect.right = dstRect.left + mole.getWidth();
-        dstRect.bottom = dstRect.top + mole.getHeight();
+        dstRect.right = dstRect.left + mole.getWidth()/3;
+        dstRect.bottom = dstRect.top + mole.getHeight()/3;
 
         canvas.drawBitmap(mole, null, dstRect, null);
     }

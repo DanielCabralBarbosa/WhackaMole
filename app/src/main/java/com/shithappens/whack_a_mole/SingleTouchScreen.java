@@ -15,56 +15,52 @@ public class SingleTouchScreen extends AppCompatActivity implements View.OnTouch
 
     private Context context;
 
+    private boolean loop = false;
+
     Game game;
 
 
 
     CountDownTimer timer;
-    private final int MAX_SEG = 10;
-    private long timeUntilInMillisec = (MAX_SEG + 1) * 1000;
 
 
-
-    GameOver gameOver;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_single_touch_screen);
 
         game = new Game(this);
         setContentView(game);
 
-
     }
 
-    protected void startTimer() {
-       timer = new CountDownTimer(timeUntilInMillisec, 1000) {
+    /*private void startTimer(COn) {
+       timer = new CountDownTimer(5000, 1000) {
            @Override
            public void onTick(long millisUntilFinished) {
-               timeUntilInMillisec = millisUntilFinished;
 
            }
 
            @Override
            public void onFinish() {
-               onGameOver();
+               Intent intent = new Intent(this.context, GameOver.class );
+               startActivity(intent);
+               finish();
 
 
            }
-       }.start();
 
-    }
 
-    private void onGameOver(){
 
-        Intent intent = new Intent(this.context, GameOver.class );
-        startActivity(intent);
-        finish();
-    }
+           }
+       };
 
-    private void setContentView(Game game) {
-    }
+
+    private void onFinish(){
+
+    }*/
 
     @Override
     protected void onResume() {
@@ -77,7 +73,7 @@ public class SingleTouchScreen extends AppCompatActivity implements View.OnTouch
                 game.update();
                 game.invalidate();
 
-                //new Handler().postDelayed(this, 300);//
+                new Handler().postDelayed(this, 300);
             }
         }, 300);
     }
