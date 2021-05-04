@@ -11,7 +11,7 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnJogar;
+    private Button btnJogar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,14 +20,18 @@ public class MainActivity extends AppCompatActivity {
 
         btnJogar = findViewById(R.id.btnJogar);
 
+        btnJogar.setOnClickListener(new View.OnClickListener() {
+            
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(), SingleTouchScreen.class);
+
+                startActivity( intent );
+
+            }
+        });
     }
-        public void onClick(View view) {
-
-            Intent intent = new Intent(getApplicationContext(), SingleTouchScreen.class);
-
-            startActivity( intent );
-
-        }
 
 }
 
