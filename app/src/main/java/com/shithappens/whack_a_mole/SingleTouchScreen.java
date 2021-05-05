@@ -22,6 +22,16 @@ public class SingleTouchScreen extends AppCompatActivity implements View.OnTouch
 
 
     CountDownTimer timer;
+    private final int MAX_SEG = 10;
+    private long tempoRestanteEmMiliseg = (MAX_SEG + 1) * 1000;
+
+    GameOver gameOver;
+
+    private static int pontos;
+
+    public static int getPontos() {
+        return pontos;
+    }
 
 
 
@@ -40,32 +50,29 @@ public class SingleTouchScreen extends AppCompatActivity implements View.OnTouch
 
     }
 
-    /*private void startTimer(COn) {
+    private void startTimer() {
        timer = new CountDownTimer(5000, 1000) {
            @Override
            public void onTick(long millisUntilFinished) {
+            tempoRestanteEmMiliseg = millisUntilFinished;
 
            }
 
            @Override
            public void onFinish() {
-               Intent intent = new Intent(this.context, GameOver.class );
-               startActivity(intent);
-               finish();
-
-
+               OnFimDeJogo();
            }
+           }.start();
+       }
 
 
+    private void onFimDeJogo(){
+    Intent intent = new Intent(this.context, GameOver.class);
+    startActivity(intent);
+    finish();
 
-           }
-       };
-
-
-    private void onFinish(){
-
-    }*/
-
+    }
+    
     @Override
     protected void onResume() {
         super.onResume();

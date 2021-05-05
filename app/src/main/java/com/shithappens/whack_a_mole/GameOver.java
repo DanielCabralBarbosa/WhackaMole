@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 public class GameOver extends AppCompatActivity {
 
+    private int pontosUltimaPartida;
     Button btnJogarNovamente;
     TextView txtScore;
 
@@ -18,8 +19,11 @@ public class GameOver extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_over);
 
+        pontosUltimaPartida = SingleTouchScreen.getPontos();
+
         btnJogarNovamente = findViewById(R.id.btnJogarNovamente);
         txtScore = findViewById(R.id.txtScore);
+        txtScore.setText(pontosUltimaPartida);
 
         btnJogarNovamente.setOnClickListener(new View.OnClickListener() {
             @Override
