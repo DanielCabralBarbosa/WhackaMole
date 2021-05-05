@@ -31,8 +31,12 @@ public class SingleTouchScreen extends AppCompatActivity implements View.OnTouch
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_single_touch_screen);
 
+
+
         game = new Game(this);
         setContentView(game);
+
+        game.setOnTouchListener(this);
 
     }
 
@@ -68,10 +72,13 @@ public class SingleTouchScreen extends AppCompatActivity implements View.OnTouch
 
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
+
+
             @Override
             public void run() {
                 game.update();
                 game.invalidate();
+
 
                 new Handler().postDelayed(this, 300);
             }
@@ -81,11 +88,15 @@ public class SingleTouchScreen extends AppCompatActivity implements View.OnTouch
     @Override
     public boolean onTouch(View view, MotionEvent event) {
 
+
+
         if (event.getAction() == MotionEvent.ACTION_DOWN){
-            int x = (int) event.getX();
-            int y = (int) event.getY();
+            int x = (int)event.getX();
+            int y = (int)event.getY();
 
             game.touch(x, y);
+
+
         }
 
         return false;
